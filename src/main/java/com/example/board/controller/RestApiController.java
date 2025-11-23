@@ -4,10 +4,16 @@ import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +28,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.example.board.dto.BoardDto;
 import com.example.board.dto.BoardFileDto;
+import com.example.board.dto.BoardListResponse;
 import com.example.board.service.BoardService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -37,11 +44,26 @@ public class RestApiController {
     @Autowired
     private BoardService boardService;
 
+//    @GetMapping("/board")
+//    @Operation(summary="게시판 목록 조회", description="등록된 게시물 중에 삭제되지 않은 게시물을 목록 형태로 반환합니다.")    
+//    public List<BoardDto> boardList() throws Exception {
+//        return boardService.selectBoardList();
+//    }
+//    
+    
     @GetMapping("/board")
-    @Operation(summary="게시판 목록 조회", description="등록된 게시물 중에 삭제되지 않은 게시물을 목록 형태로 반환합니다.")    
-    public List<BoardDto> boardList() throws Exception {
-        return boardService.selectBoardList();
+    @Operation(summary="게시판 목록 조회", description="등록된 게시물 중에 삭제되지 않은 게시물을 목록 형태로 반환합니다.")
+    public List<BoardListResponse> boardList() throws Exception {
+    	List<BoardListResponse> results = new ArrayList<>();
+		List<BoardDto> list = boardService.selectBoardList();
+		for (BoardDto dto : list) {
+			BoardListResponse res = new ModelMapper().map(dto, BoardListResponse.class);
+			results.add(res);
+		}
+		return results;
     }
+    
+    
 
     @PostMapping(value = "/board", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public void insertBoard(@RequestParam("board") String boardData, MultipartHttpServletRequest request) throws Exception {
@@ -50,11 +72,31 @@ public class RestApiController {
         boardService.insertBoard(board, request);
     }
 
+//    
+//    @GetMapping("/board/{boardIdx}")
+//    @Parameter(name = "boardIdx", description="게시판 아이디", required=true)
+//    public BoardDto boardDetail(@PathVariable("boardIdx") int boardIdx) throws Exception {
+//        return boardService.selectBoardDetail(boardIdx);
+//    }
+//    
+    
     @GetMapping("/board/{boardIdx}")
     @Parameter(name = "boardIdx", description="게시판 아이디", required=true)
-    public BoardDto boardDetail(@PathVariable("boardIdx") int boardIdx) throws Exception {
-        return boardService.selectBoardDetail(boardIdx);
+    public ResponseEntity<Object> boardDetail(@PathVariable("boardIdx") int boardIdx) throws Exception {
+    	BoardDto boardDto = null;
+    	try {
+    		boardDto = boardService.selectBoardDetail(boardIdx);
+    	} catch(Exception e) {
+    		Map<String, Object> result = new HashMap<>();
+    		result.put("code", HttpStatus.NOT_FOUND.value());
+    		result.put("name", HttpStatus.NOT_FOUND.name());
+    		result.put("message", "일치하는 게시물이 존재하지 않습니다.");
+    		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(result);    		
+    	}
+    	return ResponseEntity.status(HttpStatus.OK).body(boardDto);
     }
+
+
     
     @PutMapping("/board/{boardIdx}")
     public void updateBoard(@PathVariable("boardIdx") int boardIdx, @RequestBody BoardDto boardDto) throws Exception {

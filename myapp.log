@@ -2464,3 +2464,371 @@ org.apache.tomcat.util.http.fileupload.FileUploadException: the request was reje
 2025-11-23 14:50:16 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
 2025-11-23 14:50:16 [RMI TCP Connection(10)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-11-23 14:50:16 [RMI TCP Connection(10)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-23 14:50:19 [restartedMain] INFO  com.example.board.BoardApplication - Starting BoardApplication using Java 21.0.9 with PID 26368 (C:\workspace\board\bin\main started by HPE in C:\workspace\board)
+2025-11-23 14:50:19 [restartedMain] DEBUG com.example.board.BoardApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-11-23 14:50:19 [restartedMain] INFO  com.example.board.BoardApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-23 14:50:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-23 14:50:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-23 14:50:20 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-23 14:50:20 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-23 14:50:20 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-23 14:50:20 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-23 14:50:20 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1208 ms
+2025-11-23 14:50:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-23 14:50:20 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e0bf11d
+2025-11-23 14:50:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-23 14:50:21 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-11-23 14:50:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-23 14:50:21 [restartedMain] INFO  com.example.board.BoardApplication - Started BoardApplication in 2.965 seconds (process running for 3.583)
+2025-11-23 14:50:21 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-23 14:50:21 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /my-doc.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-23 14:50:24 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-23 14:50:24 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-23 14:50:24 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-11-23 14:50:24 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/swagger-ui/index.html
+2025-11-23 14:50:24 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-4] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/swagger-ui/index.css
+2025-11-23 14:50:24 [http-nio-8080-exec-4] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/swagger-ui/swagger-ui-bundle.js
+2025-11-23 14:50:24 [http-nio-8080-exec-5] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-5] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/swagger-ui/swagger-ui-standalone-preset.js
+2025-11-23 14:50:24 [http-nio-8080-exec-2] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-2] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/swagger-ui/swagger-ui.css
+2025-11-23 14:50:24 [http-nio-8080-exec-4] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-2] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-5] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-6] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-6] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/swagger-ui/swagger-initializer.js
+2025-11-23 14:50:24 [http-nio-8080-exec-6] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-7] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-7] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/v3/api-docs/swagger-config
+2025-11-23 14:50:24 [http-nio-8080-exec-8] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-8] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/swagger-ui/favicon-32x32.png
+2025-11-23 14:50:24 [http-nio-8080-exec-8] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-7] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-9] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 14:50:24 [http-nio-8080-exec-9] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/v3/api-docs
+2025-11-23 14:50:25 [http-nio-8080-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 184 ms
+2025-11-23 14:50:25 [http-nio-8080-exec-9] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 15:19:16 [RMI TCP Connection(39)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-11-23 15:19:16 [RMI TCP Connection(39)-127.0.0.1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-23 15:19:16 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-23 15:19:16 [RMI TCP Connection(39)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-23 15:19:16 [RMI TCP Connection(39)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-23 15:19:19 [restartedMain] INFO  com.example.board.BoardApplication - Starting BoardApplication using Java 21.0.9 with PID 14024 (C:\workspace\board\bin\main started by HPE in C:\workspace\board)
+2025-11-23 15:19:19 [restartedMain] DEBUG com.example.board.BoardApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-11-23 15:19:19 [restartedMain] INFO  com.example.board.BoardApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-23 15:19:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-23 15:19:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-23 15:19:20 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-23 15:19:20 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-23 15:19:20 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-23 15:19:20 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-23 15:19:20 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1209 ms
+2025-11-23 15:19:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-23 15:19:21 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ed227cb
+2025-11-23 15:19:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-23 15:19:22 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-11-23 15:19:22 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-23 15:19:22 [restartedMain] INFO  com.example.board.BoardApplication - Started BoardApplication in 2.963 seconds (process running for 3.588)
+2025-11-23 15:19:22 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-23 15:19:22 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /my-doc.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-23 15:20:18 [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-11-23 15:20:18 [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-23 15:20:18 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-23 15:20:18 [RMI TCP Connection(9)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-23 15:20:18 [RMI TCP Connection(9)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-23 15:20:21 [restartedMain] INFO  com.example.board.BoardApplication - Starting BoardApplication using Java 21.0.9 with PID 22936 (C:\workspace\board\bin\main started by HPE in C:\workspace\board)
+2025-11-23 15:20:21 [restartedMain] DEBUG com.example.board.BoardApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-11-23 15:20:21 [restartedMain] INFO  com.example.board.BoardApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-23 15:20:21 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-23 15:20:21 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-23 15:20:22 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-23 15:20:22 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-23 15:20:22 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-23 15:20:22 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-23 15:20:22 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1209 ms
+2025-11-23 15:20:22 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-23 15:20:22 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e0bf11d
+2025-11-23 15:20:22 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-23 15:20:23 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-11-23 15:20:23 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-23 15:20:23 [restartedMain] INFO  com.example.board.BoardApplication - Started BoardApplication in 2.964 seconds (process running for 3.581)
+2025-11-23 15:20:23 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-23 15:20:23 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /my-doc.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-23 15:20:35 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-23 15:20:35 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-23 15:20:35 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board/12
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardDetail
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardDetail
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.updateHitCount
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG c.e.b.m.BoardMapper.updateHitCount - ==>  Preparing: update t_board set hit_cnt = hit_cnt + 1 where board_idx = ?
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG c.e.b.m.BoardMapper.updateHitCount - ==> Parameters: 12(Integer)
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG c.e.b.m.BoardMapper.updateHitCount - <==    Updates: 1
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardDetail
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardDetail - ==>  Preparing: select board_idx, title, hit_cnt, contents, creator_id, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' and board_idx = ?
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardDetail - ==> Parameters: 12(Integer)
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardDetail - <==      Total: 1
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardFileList
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardFileList - ==>  Preparing: select idx, board_idx, original_file_name, format(round(file_size/1024), 0) as file_size from t_file where board_idx = ? and deleted_yn = 'N'
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardFileList - ==> Parameters: 12(Integer)
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardFileList - <==      Total: 0
+2025-11-23 15:20:35 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board/13
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardDetail
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardDetail
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.updateHitCount
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.m.BoardMapper.updateHitCount - ==>  Preparing: update t_board set hit_cnt = hit_cnt + 1 where board_idx = ?
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.m.BoardMapper.updateHitCount - ==> Parameters: 13(Integer)
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.m.BoardMapper.updateHitCount - <==    Updates: 0
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardDetail
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.m.B.selectBoardDetail - ==>  Preparing: select board_idx, title, hit_cnt, contents, creator_id, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' and board_idx = ?
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.m.B.selectBoardDetail - ==> Parameters: 13(Integer)
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.m.B.selectBoardDetail - <==      Total: 0
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardFileList
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.m.B.selectBoardFileList - ==>  Preparing: select idx, board_idx, original_file_name, format(round(file_size/1024), 0) as file_size from t_file where board_idx = ? and deleted_yn = 'N'
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.m.B.selectBoardFileList - ==> Parameters: 13(Integer)
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.m.B.selectBoardFileList - <==      Total: 0
+2025-11-23 15:20:49 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.example.board.dto.BoardDto.setFileInfoList(java.util.List)" because "boardDto" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.example.board.dto.BoardDto.setFileInfoList(java.util.List)" because "boardDto" is null
+	at com.example.board.service.BoardServiceImpl.selectBoardDetail(BoardServiceImpl.java:49)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.example.board.aop.LoggerAspect.logPrinter(LoggerAspect.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:649)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:631)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.board.service.BoardServiceImpl$$SpringCGLIB$$0.selectBoardDetail(<generated>)
+	at com.example.board.controller.RestApiController.boardDetail(RestApiController.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.example.board.aop.LoggerAspect.logPrinter(LoggerAspect.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:649)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:631)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.board.controller.RestApiController$$SpringCGLIB$$0.boardDetail(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/error
+2025-11-23 15:20:49 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 15:22:19 [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-11-23 15:22:19 [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-23 15:22:19 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-23 15:22:19 [RMI TCP Connection(11)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-23 15:22:19 [RMI TCP Connection(11)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-23 15:22:22 [restartedMain] INFO  com.example.board.BoardApplication - Starting BoardApplication using Java 21.0.9 with PID 6720 (C:\workspace\board\bin\main started by HPE in C:\workspace\board)
+2025-11-23 15:22:22 [restartedMain] DEBUG com.example.board.BoardApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-11-23 15:22:22 [restartedMain] INFO  com.example.board.BoardApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-23 15:22:22 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-23 15:22:22 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-23 15:22:23 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-23 15:22:23 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-23 15:22:23 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-23 15:22:23 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-23 15:22:23 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1207 ms
+2025-11-23 15:22:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-23 15:22:24 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e0bf11d
+2025-11-23 15:22:24 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-23 15:22:24 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-11-23 15:22:24 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-23 15:22:24 [restartedMain] INFO  com.example.board.BoardApplication - Started BoardApplication in 2.965 seconds (process running for 3.581)
+2025-11-23 15:22:24 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-23 15:22:24 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /my-doc.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-23 15:22:31 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-23 15:22:31 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-23 15:22:31 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board/13
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardDetail
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardDetail
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.updateHitCount
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG c.e.b.m.BoardMapper.updateHitCount - ==>  Preparing: update t_board set hit_cnt = hit_cnt + 1 where board_idx = ?
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG c.e.b.m.BoardMapper.updateHitCount - ==> Parameters: 13(Integer)
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG c.e.b.m.BoardMapper.updateHitCount - <==    Updates: 0
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardDetail
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardDetail - ==>  Preparing: select board_idx, title, hit_cnt, contents, creator_id, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' and board_idx = ?
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardDetail - ==> Parameters: 13(Integer)
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardDetail - <==      Total: 0
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardFileList
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardFileList - ==>  Preparing: select idx, board_idx, original_file_name, format(round(file_size/1024), 0) as file_size from t_file where board_idx = ? and deleted_yn = 'N'
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardFileList - ==> Parameters: 13(Integer)
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardFileList - <==      Total: 0
+2025-11-23 15:22:31 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 15:24:05 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:24:05 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board
+2025-11-23 15:24:05 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardList
+2025-11-23 15:24:05 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardList
+2025-11-23 15:24:05 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardList
+2025-11-23 15:24:05 [http-nio-8080-exec-3] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==>  Preparing: select board_idx, title, hit_cnt, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' order by board_idx desc
+2025-11-23 15:24:05 [http-nio-8080-exec-3] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==> Parameters: 
+2025-11-23 15:24:05 [http-nio-8080-exec-3] DEBUG c.e.b.m.BoardMapper.selectBoardList - <==      Total: 10
+2025-11-23 15:24:05 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 15:26:07 [http-nio-8080-exec-5] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:26:07 [http-nio-8080-exec-5] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/rest/board/write
+2025-11-23 15:26:07 [http-nio-8080-exec-5] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestBoardController.boardWrite
+2025-11-23 15:26:07 [http-nio-8080-exec-5] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 15:26:07 [http-nio-8080-exec-6] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:26:07 [http-nio-8080-exec-6] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/css/board.css
+2025-11-23 15:26:07 [http-nio-8080-exec-6] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 15:26:10 [http-nio-8080-exec-7] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:26:10 [http-nio-8080-exec-7] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/css/board.css
+2025-11-23 15:26:10 [http-nio-8080-exec-7] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 15:26:10 [http-nio-8080-exec-8] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:26:10 [http-nio-8080-exec-8] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/.well-known/appspecific/com.chrome.devtools.json
+2025-11-23 15:26:10 [http-nio-8080-exec-8] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:26:10 [http-nio-8080-exec-8] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/error
+2025-11-23 15:26:10 [http-nio-8080-exec-8] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 15:29:38 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-11-23 15:29:38 [Thread-1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-23 15:29:38 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-23 15:29:38 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-23 15:29:38 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-23 15:29:39 [restartedMain] INFO  com.example.board.BoardApplication - Starting BoardApplication using Java 21.0.9 with PID 6720 (C:\workspace\board\bin\main started by HPE in C:\workspace\board)
+2025-11-23 15:29:39 [restartedMain] DEBUG com.example.board.BoardApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-11-23 15:29:39 [restartedMain] INFO  com.example.board.BoardApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-23 15:29:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-23 15:29:39 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-23 15:29:39 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-23 15:29:39 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-23 15:29:39 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 314 ms
+2025-11-23 15:29:39 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-23 15:29:39 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@414d16a
+2025-11-23 15:29:39 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-23 15:29:39 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-11-23 15:29:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-23 15:29:39 [restartedMain] INFO  com.example.board.BoardApplication - Started BoardApplication in 0.784 seconds (process running for 438.387)
+2025-11-23 15:29:39 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-23 15:29:39 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-23 15:29:39 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /my-doc.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-23 15:33:26 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 15 class path changes (0 additions, 0 deletions, 15 modifications)
+2025-11-23 15:33:26 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-23 15:33:26 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-23 15:33:26 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-11-23 15:33:26 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-11-23 15:33:26 [restartedMain] INFO  com.example.board.BoardApplication - Starting BoardApplication using Java 21.0.9 with PID 6720 (C:\workspace\board\bin\main started by HPE in C:\workspace\board)
+2025-11-23 15:33:26 [restartedMain] DEBUG com.example.board.BoardApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-11-23 15:33:26 [restartedMain] INFO  com.example.board.BoardApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-23 15:33:26 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-23 15:33:26 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-23 15:33:26 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-23 15:33:26 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-23 15:33:26 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 279 ms
+2025-11-23 15:33:26 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-11-23 15:33:26 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c523360
+2025-11-23 15:33:26 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-11-23 15:33:27 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-11-23 15:33:27 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-23 15:33:27 [restartedMain] INFO  com.example.board.BoardApplication - Started BoardApplication in 0.682 seconds (process running for 665.933)
+2025-11-23 15:33:27 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-23 15:33:27 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-23 15:33:27 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /my-doc.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-23 15:36:59 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-11-23 15:36:59 [Thread-9] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-23 15:36:59 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-23 15:36:59 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-11-23 15:36:59 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-11-23 15:36:59 [restartedMain] INFO  com.example.board.BoardApplication - Starting BoardApplication using Java 21.0.9 with PID 6720 (C:\workspace\board\bin\main started by HPE in C:\workspace\board)
+2025-11-23 15:36:59 [restartedMain] DEBUG com.example.board.BoardApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-11-23 15:36:59 [restartedMain] INFO  com.example.board.BoardApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-23 15:36:59 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-23 15:36:59 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-23 15:36:59 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-23 15:36:59 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-23 15:36:59 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 244 ms
+2025-11-23 15:36:59 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-11-23 15:36:59 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@782a3b2b
+2025-11-23 15:36:59 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-11-23 15:37:00 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-11-23 15:37:00 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-23 15:37:00 [restartedMain] INFO  com.example.board.BoardApplication - Started BoardApplication in 0.638 seconds (process running for 878.649)
+2025-11-23 15:37:00 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-23 15:37:00 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-23 15:37:00 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /my-doc.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-23 15:41:51 [RMI TCP Connection(39)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-11-23 15:41:51 [RMI TCP Connection(39)-127.0.0.1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-23 15:41:51 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-23 15:41:51 [RMI TCP Connection(39)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-11-23 15:41:51 [RMI TCP Connection(39)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.

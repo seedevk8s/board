@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.ObjectUtils;
@@ -18,6 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.board.dto.BoardDto;
 import com.example.board.dto.BoardFileDto;
+import com.example.board.dto.BoardInsertRequest;
 import com.example.board.service.BoardService;
 
 import jakarta.servlet.http.HttpServletResponse;
@@ -30,6 +32,7 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 	
+	
 	@GetMapping("/boardList.do")
 	public ModelAndView boardList() throws Exception {
 		ModelAndView mv = new ModelAndView("/board/boardList");
@@ -40,18 +43,50 @@ public class BoardController {
 		return mv;
 	}
 	
+	
+	
+	
 	// 글쓰기 화면 요청을 처리하는 메서드
 	@GetMapping("/boardWrite.do")
 	public String boardWrite() throws Exception {
 		return "/board/boardWrite";
 	}
 	
-	// 글저장을 처리하는 메서드
+//	// 글저장을 처리하는 메서드
+//	@PostMapping("/insertBoard.do")
+//	public String insertBoard(BoardDto boardDto,  MultipartHttpServletRequest request) throws Exception {
+//		boardService.insertBoard(boardDto, request);
+//		return "redirect:/board/boardList.do";
+//	}
+//	
+	
+//	
+//	// 글저장을 처리하는 메서드
+//	@PostMapping("/insertBoard.do")
+//	public String insertBoard(BoardInsertRequest insertRequest, MultipartHttpServletRequest request) throws Exception {
+//		BoardDto boardDto = new BoardDto();
+//		boardDto.setTitle(insertRequest.getTitle());
+//		boardDto.setContents(insertRequest.getContents());
+//		
+//		boardService.insertBoard(boardDto, request);
+//		return "redirect:/board/boardList.do";
+//	}
+
+	
 	@PostMapping("/insertBoard.do")
-	public String insertBoard(BoardDto boardDto,  MultipartHttpServletRequest request) throws Exception {
+	public String insertBoard(BoardInsertRequest insertRequest, MultipartHttpServletRequest request) throws Exception {
+		/*
+		BoardDto boardDto = new BoardDto();
+		boardDto.setTitle(insertRequest.getTitle());
+		boardDto.setContents(insertRequest.getContents());
+		*/
+		BoardDto boardDto = new ModelMapper().map(insertRequest, BoardDto.class);
+		
 		boardService.insertBoard(boardDto, request);
 		return "redirect:/board/boardList.do";
 	}
+	
+	
 	
 	// 게시글 상세 조회 저리하는 메서드 
 	// /board/boardDetail.do?boardIdx=1
