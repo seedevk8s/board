@@ -12,6 +12,8 @@
         <h2>게시판 상세</h2>
         <form id="frm" method="post">
 			<input type="hidden" id="boardIdx" name="boardIdx" th:value="${board.boardIdx}" />
+			<input type="hidden" id="method" name="_method" />
+			
             <table class="board_detail">
                 <colgroup>
                     <col width="15%">
@@ -47,11 +49,33 @@
             </table>
         </form>
 		
-		<!-- 첨부파일 목록 (나중추가) -->
+		<!-- 첨부파일 목록 (나중추가) 
+			th:href="@{/board/downloadBoardFile.do(idx=${item.idx}, boardIdx=${item.boardIdx})}"></a> 
+			
+					
+				      $(function () {
+						  const boardIdx = $('#boardIdx').val();
+						  
+				          $('#list').on('click', function () {
+				              location.href = 'boardList.do';
+				          });
+				          $('#update').on('click', function () {
+				              let frm = $('#frm')[0];
+				              frm.action = 'updateBoard.do';
+				              frm.submit();
+				          });
+				          $('#delete').on('click', function () {
+				              let frm = $('#frm')[0];
+				              frm.action = 'deleteBoard.do';
+				              frm.submit();
+				          });
+				      }); 
+					  	
+				-->
 		<div class="file_list">
 			<a th:each="item : ${board.fileInfoList}" 
 				th:text="|${item.originalFileName} (${item.fileSize}kb)|"
-				th:href="@{/board/downloadBoardFile.do(idx=${item.idx}, boardIdx=${item.boardIdx})}"></a>
+				th:href="|/rest/board/file/${item.boardIdx}/${item.idx}|"></a>
 		</div>		
 		
 	   <input type="button" id="list" class="btn" value="목록으로" />
@@ -60,21 +84,28 @@
 
 	   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 	   <script>
-	      $(function () {
-	          $('#list').on('click', function () {
-	              location.href = 'boardList.do';
-	          });
-	          $('#update').on('click', function () {
-	              let frm = $('#frm')[0];
-	              frm.action = 'updateBoard.do';
-	              frm.submit();
-	          });
-	          $('#delete').on('click', function () {
-	              let frm = $('#frm')[0];
-	              frm.action = 'deleteBoard.do';
-	              frm.submit();
-	          });
-	      }); 
+		  
+		  $(function () {
+		  	const boardIdx = $('#boardIdx').val();
+		      	$('#list').on('click', function () {
+		       	location.href = '/rest/board';
+		      	});
+		      	$('#update').on('click', function () {
+		  		$('#method').val("PUT");
+		  	                      
+		  		let frm = $('#frm')[0];
+		          	frm.action = '/rest/board/'+boardIdx;
+		  	   	frm.submit();
+		     	});
+		      	$('#delete').on('click', function () {
+		  		$('#method').val("DELETE");
+		  	                   
+		  		let frm = $('#frm')[0];
+		          	frm.action = '/rest/board/'+boardIdx;
+		  	   	frm.submit();
+		      	});
+		  }); 
+		  
 	   </script>
 		
     </div>

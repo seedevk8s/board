@@ -9,8 +9,8 @@
 
 <body>
     <div class="container">
-        <h2>게시판 등록</h2>
-        <form id="frm" method="post" action="/board/insertBoard.do" enctype="multipart/form-data">
+        <h2>REST 게시판 등록</h2>
+        <form id="frm" method="post" action="/rest/board/write" enctype="multipart/form-data">
             <table class="board_detail">
                 <tr>
                     <td>제목</td>
@@ -23,7 +23,8 @@
                 </tr>
             </table>
 			<input type="file" id="files" name="files" multiple="multiple" />
-            <input type="submit" id="submit" value="저장" class="btn">
+			            
+			<input type="submit" id="submit" value="저장" class="btn">
         </form>
     </div>
 </body>
