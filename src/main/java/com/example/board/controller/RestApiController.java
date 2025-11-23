@@ -15,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ObjectUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,6 +41,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 @RequestMapping("/api")
+//@CrossOrigin(origins = "http://localhost:5173")
 public class RestApiController {
     @Autowired
     private BoardService boardService;
@@ -51,6 +53,7 @@ public class RestApiController {
 //    }
 //    
     
+    //@CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/board")
     @Operation(summary="게시판 목록 조회", description="등록된 게시물 중에 삭제되지 않은 게시물을 목록 형태로 반환합니다.")
     public List<BoardListResponse> boardList() throws Exception {

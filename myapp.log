@@ -2832,3 +2832,189 @@ java.lang.NullPointerException: Cannot invoke "com.example.board.dto.BoardDto.se
 2025-11-23 15:41:51 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
 2025-11-23 15:41:51 [RMI TCP Connection(39)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
 2025-11-23 15:41:51 [RMI TCP Connection(39)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-11-23 15:41:54 [restartedMain] INFO  com.example.board.BoardApplication - Starting BoardApplication using Java 21.0.9 with PID 3144 (C:\workspace\board\bin\main started by HPE in C:\workspace\board)
+2025-11-23 15:41:54 [restartedMain] DEBUG com.example.board.BoardApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-11-23 15:41:54 [restartedMain] INFO  com.example.board.BoardApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-23 15:41:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-23 15:41:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-23 15:41:56 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-23 15:41:56 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-23 15:41:56 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-23 15:41:56 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-23 15:41:56 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1250 ms
+2025-11-23 15:41:56 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-23 15:41:56 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b88d2fb
+2025-11-23 15:41:56 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-23 15:41:57 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-11-23 15:41:57 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-23 15:41:57 [restartedMain] INFO  com.example.board.BoardApplication - Started BoardApplication in 3.076 seconds (process running for 3.718)
+2025-11-23 15:41:57 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-23 15:41:57 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /my-doc.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-23 15:42:10 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-23 15:42:10 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-23 15:42:10 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board/13
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardDetail
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardDetail
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.updateHitCount
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG c.e.b.m.BoardMapper.updateHitCount - ==>  Preparing: update t_board set hit_cnt = hit_cnt + 1 where board_idx = ?
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG c.e.b.m.BoardMapper.updateHitCount - ==> Parameters: 13(Integer)
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG c.e.b.m.BoardMapper.updateHitCount - <==    Updates: 0
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardDetail
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardDetail - ==>  Preparing: select board_idx, title, hit_cnt, contents, creator_id, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' and board_idx = ?
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardDetail - ==> Parameters: 13(Integer)
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardDetail - <==      Total: 0
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardFileList
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardFileList - ==>  Preparing: select idx, board_idx, original_file_name, format(round(file_size/1024), 0) as file_size from t_file where board_idx = ? and deleted_yn = 'N'
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardFileList - ==> Parameters: 13(Integer)
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG c.e.b.m.B.selectBoardFileList - <==      Total: 0
+2025-11-23 15:42:10 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board/12
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardDetail
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardDetail
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.updateHitCount
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG c.e.b.m.BoardMapper.updateHitCount - ==>  Preparing: update t_board set hit_cnt = hit_cnt + 1 where board_idx = ?
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG c.e.b.m.BoardMapper.updateHitCount - ==> Parameters: 12(Integer)
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG c.e.b.m.BoardMapper.updateHitCount - <==    Updates: 1
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardDetail
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG c.e.b.m.B.selectBoardDetail - ==>  Preparing: select board_idx, title, hit_cnt, contents, creator_id, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' and board_idx = ?
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG c.e.b.m.B.selectBoardDetail - ==> Parameters: 12(Integer)
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG c.e.b.m.B.selectBoardDetail - <==      Total: 1
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardFileList
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG c.e.b.m.B.selectBoardFileList - ==>  Preparing: select idx, board_idx, original_file_name, format(round(file_size/1024), 0) as file_size from t_file where board_idx = ? and deleted_yn = 'N'
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG c.e.b.m.B.selectBoardFileList - ==> Parameters: 12(Integer)
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG c.e.b.m.B.selectBoardFileList - <==      Total: 0
+2025-11-23 15:42:15 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 15:42:20 [http-nio-8080-exec-5] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 15:42:20 [http-nio-8080-exec-5] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board
+2025-11-23 15:42:20 [http-nio-8080-exec-5] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardList
+2025-11-23 15:42:20 [http-nio-8080-exec-5] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardList
+2025-11-23 15:42:20 [http-nio-8080-exec-5] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardList
+2025-11-23 15:42:20 [http-nio-8080-exec-5] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==>  Preparing: select board_idx, title, hit_cnt, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' order by board_idx desc
+2025-11-23 15:42:20 [http-nio-8080-exec-5] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==> Parameters: 
+2025-11-23 15:42:20 [http-nio-8080-exec-5] DEBUG c.e.b.m.BoardMapper.selectBoardList - <==      Total: 10
+2025-11-23 15:42:20 [http-nio-8080-exec-5] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 16:25:15 [http-nio-8080-exec-7] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 16:25:15 [http-nio-8080-exec-7] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board
+2025-11-23 16:25:15 [http-nio-8080-exec-7] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardList
+2025-11-23 16:25:15 [http-nio-8080-exec-7] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardList
+2025-11-23 16:25:15 [http-nio-8080-exec-7] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardList
+2025-11-23 16:25:15 [http-nio-8080-exec-7] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==>  Preparing: select board_idx, title, hit_cnt, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' order by board_idx desc
+2025-11-23 16:25:15 [http-nio-8080-exec-7] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==> Parameters: 
+2025-11-23 16:25:15 [http-nio-8080-exec-7] DEBUG c.e.b.m.BoardMapper.selectBoardList - <==      Total: 10
+2025-11-23 16:25:15 [http-nio-8080-exec-7] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 16:25:15 [http-nio-8080-exec-9] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 16:25:15 [http-nio-8080-exec-9] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board
+2025-11-23 16:25:15 [http-nio-8080-exec-9] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardList
+2025-11-23 16:25:15 [http-nio-8080-exec-9] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardList
+2025-11-23 16:25:15 [http-nio-8080-exec-9] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardList
+2025-11-23 16:25:15 [http-nio-8080-exec-9] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==>  Preparing: select board_idx, title, hit_cnt, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' order by board_idx desc
+2025-11-23 16:25:15 [http-nio-8080-exec-9] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==> Parameters: 
+2025-11-23 16:25:15 [http-nio-8080-exec-9] DEBUG c.e.b.m.BoardMapper.selectBoardList - <==      Total: 10
+2025-11-23 16:25:15 [http-nio-8080-exec-9] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 16:29:00 [RMI TCP Connection(56)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-11-23 16:29:00 [RMI TCP Connection(56)-127.0.0.1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-23 16:29:00 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-23 16:29:00 [RMI TCP Connection(56)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-23 16:29:00 [RMI TCP Connection(56)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-23 16:29:03 [restartedMain] INFO  com.example.board.BoardApplication - Starting BoardApplication using Java 21.0.9 with PID 27112 (C:\workspace\board\bin\main started by HPE in C:\workspace\board)
+2025-11-23 16:29:03 [restartedMain] DEBUG com.example.board.BoardApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-11-23 16:29:03 [restartedMain] INFO  com.example.board.BoardApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-23 16:29:03 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-23 16:29:03 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-23 16:29:04 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-23 16:29:04 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-23 16:29:04 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-23 16:29:04 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-23 16:29:04 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1234 ms
+2025-11-23 16:29:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-23 16:29:04 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ee2ef1d
+2025-11-23 16:29:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-23 16:29:05 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-11-23 16:29:05 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-23 16:29:05 [restartedMain] INFO  com.example.board.BoardApplication - Started BoardApplication in 3.022 seconds (process running for 3.653)
+2025-11-23 16:29:05 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-23 16:29:05 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /my-doc.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-23 16:29:10 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-23 16:29:10 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-23 16:29:10 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-11-23 16:29:10 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 16:29:10 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board
+2025-11-23 16:29:10 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardList
+2025-11-23 16:29:10 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardList
+2025-11-23 16:29:10 [http-nio-8080-exec-1] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardList
+2025-11-23 16:29:10 [http-nio-8080-exec-1] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==>  Preparing: select board_idx, title, hit_cnt, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' order by board_idx desc
+2025-11-23 16:29:10 [http-nio-8080-exec-1] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==> Parameters: 
+2025-11-23 16:29:10 [http-nio-8080-exec-1] DEBUG c.e.b.m.BoardMapper.selectBoardList - <==      Total: 10
+2025-11-23 16:29:10 [http-nio-8080-exec-1] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 16:29:10 [http-nio-8080-exec-2] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 16:29:10 [http-nio-8080-exec-2] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board
+2025-11-23 16:29:10 [http-nio-8080-exec-2] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardList
+2025-11-23 16:29:10 [http-nio-8080-exec-2] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardList
+2025-11-23 16:29:10 [http-nio-8080-exec-2] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardList
+2025-11-23 16:29:10 [http-nio-8080-exec-2] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==>  Preparing: select board_idx, title, hit_cnt, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' order by board_idx desc
+2025-11-23 16:29:10 [http-nio-8080-exec-2] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==> Parameters: 
+2025-11-23 16:29:10 [http-nio-8080-exec-2] DEBUG c.e.b.m.BoardMapper.selectBoardList - <==      Total: 10
+2025-11-23 16:29:10 [http-nio-8080-exec-2] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 16:29:33 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 16:29:33 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board
+2025-11-23 16:29:33 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardList
+2025-11-23 16:29:33 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardList
+2025-11-23 16:29:33 [http-nio-8080-exec-3] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardList
+2025-11-23 16:29:33 [http-nio-8080-exec-3] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==>  Preparing: select board_idx, title, hit_cnt, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' order by board_idx desc
+2025-11-23 16:29:33 [http-nio-8080-exec-3] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==> Parameters: 
+2025-11-23 16:29:33 [http-nio-8080-exec-3] DEBUG c.e.b.m.BoardMapper.selectBoardList - <==      Total: 10
+2025-11-23 16:29:33 [http-nio-8080-exec-3] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 16:29:33 [http-nio-8080-exec-4] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 16:29:33 [http-nio-8080-exec-4] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board
+2025-11-23 16:29:33 [http-nio-8080-exec-4] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardList
+2025-11-23 16:29:33 [http-nio-8080-exec-4] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardList
+2025-11-23 16:29:33 [http-nio-8080-exec-4] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardList
+2025-11-23 16:29:33 [http-nio-8080-exec-4] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==>  Preparing: select board_idx, title, hit_cnt, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' order by board_idx desc
+2025-11-23 16:29:33 [http-nio-8080-exec-4] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==> Parameters: 
+2025-11-23 16:29:33 [http-nio-8080-exec-4] DEBUG c.e.b.m.BoardMapper.selectBoardList - <==      Total: 10
+2025-11-23 16:29:34 [http-nio-8080-exec-4] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 16:29:37 [http-nio-8080-exec-5] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 16:29:37 [http-nio-8080-exec-5] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/api/board
+2025-11-23 16:29:37 [http-nio-8080-exec-5] DEBUG com.example.board.aop.LoggerAspect - [Controller] com.example.board.controller.RestApiController.boardList
+2025-11-23 16:29:37 [http-nio-8080-exec-5] DEBUG com.example.board.aop.LoggerAspect - [ServiceImpl] com.example.board.service.BoardServiceImpl.selectBoardList
+2025-11-23 16:29:37 [http-nio-8080-exec-5] DEBUG com.example.board.aop.LoggerAspect - [Mapper] com.example.board.mapper.BoardMapper.selectBoardList
+2025-11-23 16:29:37 [http-nio-8080-exec-5] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==>  Preparing: select board_idx, title, hit_cnt, date_format(created_dt, '%Y.%m.%d %H:%i:%s') as created_dt from t_board where deleted_yn = 'N' order by board_idx desc
+2025-11-23 16:29:37 [http-nio-8080-exec-5] DEBUG c.e.b.m.BoardMapper.selectBoardList - ==> Parameters: 
+2025-11-23 16:29:37 [http-nio-8080-exec-5] DEBUG c.e.b.m.BoardMapper.selectBoardList - <==      Total: 10
+2025-11-23 16:29:37 [http-nio-8080-exec-5] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 16:29:37 [http-nio-8080-exec-6] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 16:29:37 [http-nio-8080-exec-6] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/favicon.ico
+2025-11-23 16:29:37 [http-nio-8080-exec-6] DEBUG c.e.b.interceptor.LoggerInterceptor - ***************** START *****************
+2025-11-23 16:29:37 [http-nio-8080-exec-6] DEBUG c.e.b.interceptor.LoggerInterceptor -  Request URI 	/error
+2025-11-23 16:29:37 [http-nio-8080-exec-6] DEBUG c.e.b.interceptor.LoggerInterceptor - *****************  END  *****************
+2025-11-23 16:31:35 [RMI TCP Connection(12)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-11-23 16:31:35 [RMI TCP Connection(12)-127.0.0.1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-23 16:31:35 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-23 16:31:35 [RMI TCP Connection(12)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-23 16:31:35 [RMI TCP Connection(12)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-23 16:31:38 [restartedMain] INFO  com.example.board.BoardApplication - Starting BoardApplication using Java 21.0.9 with PID 27220 (C:\workspace\board\bin\main started by HPE in C:\workspace\board)
+2025-11-23 16:31:38 [restartedMain] DEBUG com.example.board.BoardApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-11-23 16:31:38 [restartedMain] INFO  com.example.board.BoardApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-23 16:31:38 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-23 16:31:38 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-23 16:31:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-23 16:31:39 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-23 16:31:39 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-23 16:31:39 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-23 16:31:39 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1254 ms
+2025-11-23 16:31:40 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-23 16:31:40 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ff3d2e4
+2025-11-23 16:31:40 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-23 16:31:41 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-11-23 16:31:41 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-23 16:31:41 [restartedMain] INFO  com.example.board.BoardApplication - Started BoardApplication in 3.043 seconds (process running for 3.697)
+2025-11-23 16:31:41 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-23 16:31:41 [restartedMain] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /my-doc.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-23 16:35:05 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-11-23 16:35:05 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-23 16:35:05 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-23 16:35:05 [RMI TCP Connection(14)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-23 16:35:05 [RMI TCP Connection(14)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
